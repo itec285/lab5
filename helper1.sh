@@ -31,18 +31,20 @@ echo Edit the following lines to read as follows
 echo
 echo mingw: /usr/bin/x86_64-w64-mingw32-gcc
 echo esedbexport: /opt/libesedb/esedbtools/esedbexport
+echo
 read -rsp $'Press any key to continue...\n' -n 1 key
 
 leafpad /opt/smbexec/smbexec.yml
 cd /
 
 #Start extracting the ntds.dit file to exportable files
-echo ######################################################################
-echo #  Starting Initial Table Extraction.  This may take a few minutes.  #
-echo #                                                                    #
-echo ######################################################################
+echo \#######################################################################
+echo \#  Starting Initial Table Extraction.  This may take a few minutes.  ##
+echo \#                                                                    ##
+echo \#######################################################################
 cd /opt/libesedb/esedbtools
 ./esedbexport -m tables /root/ntds.dit
+echo
 echo Moving files to root directory
 mv ntds.dit.export/ ~
 
