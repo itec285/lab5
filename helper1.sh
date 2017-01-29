@@ -41,7 +41,7 @@ echo ######################################################################
 echo #  Starting Initial Table Extraction.  This may take a few minutes.  #
 echo #                                                                    #
 echo ######################################################################
-cd /opt/libsedb/esedbtools
+cd /opt/libesedb/esedbtools
 ./esedbexport -m tables /root/ntds.dit
 echo Moving files to root directory
 mv ntds.dit.export/ ~
