@@ -16,7 +16,11 @@ python /opt/NTDSXtract/dsusers.py /root/ntds.dit.export/datatable.4 /root/ntds.d
 #cd /opt
 #rm -rf *
 
-gunzip /usr/share/wordlists/rockyou.txt.gz 
-mv /usr/share/wordlists/rockyou.txt .
-john --wordlist=rockyou.txt nt-out.txt --format=nt
+# Extract the rockyou wordlist, copy it to the home directory and start john.
+# gunzip /usr/share/wordlists/rockyou.txt.gz 
+# mv /usr/share/wordlists/rockyou.txt .
+# john --wordlist=rockyou.txt nt-out.txt --format=nt
 
+# Optionally, start john again in bruteforce mode to crack any passwords not found in the dictionary.  
+# This will start it with 3 processors (Make sure the VM has at least that many)
+# john nt-out.txt --format=nt --fork=3
