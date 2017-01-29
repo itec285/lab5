@@ -7,6 +7,9 @@
 # Credit for most of this to: http://hackers-workshop.net/how-to-install-smbexec2-on-kali-linux
 cd ~
 
+#Make a temporary directory to store working data.  Will be used in the next step.
+mkdir ~/hash
+
 python /opt/NTDSXtract/dsusers.py /root/ntds.dit.export/datatable.4 /root/ntds.dit.export/link_table.6 /root/hash --syshive /root/SYSTEM --passwordhashes --lmoutfile /root/lm-out.txt --ntoutfile /root/nt-out.txt --pwdformat john
 
 #Clean up some space  - DANGER.  Only uncomment the below if you know what you're doing..
