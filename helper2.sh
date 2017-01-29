@@ -12,6 +12,15 @@ mkdir ~/hash
 
 python /opt/NTDSXtract/dsusers.py /root/ntds.dit.export/datatable.4 /root/ntds.dit.export/link_table.6 /root/hash --syshive /root/SYSTEM --passwordhashes --lmoutfile /root/lm-out.txt --ntoutfile /root/nt-out.txt --pwdformat john
 
+echo 
+echo \#######################################################################
+echo \#                    Displaying hashes below                         ##
+echo \#                                                                    ##
+echo \#######################################################################
+
+cd ~
+cat nt-out.txt
+
 #Clean up some space  - DANGER.  Only uncomment the below if you know what you're doing..
 #cd ~
 #rm -rf ntds.dit.export/
