@@ -14,7 +14,7 @@ wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
 
 #Configure libesedb
-cd libesedb/
+cd /opt/libesedb/
 ./synclibs.sh 
 ./autogen.sh 
 ./configure
@@ -33,7 +33,7 @@ echo mingw: /usr/bin/x86_64-w64-mingw32-gcc
 echo esedbexport: /opt/libesedb/esedbtools/esedbexport
 read -rsp $'Press any key to continue...\n' -n 1 key
 
-nano /opt/smbexec/smbexec.yml
+leafpad /opt/smbexec/smbexec.yml
 cd /
 
 #Start extracting the ntds.dit file to exportable files
