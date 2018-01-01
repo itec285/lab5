@@ -7,10 +7,15 @@
 # Credit for most of this to: http://hackers-workshop.net/how-to-install-smbexec2-on-kali-linux
 
 # Install the necessary software
+cp ntdsxtract_v1_2_beta.zip /opt
+
 cd /opt
 git clone https://github.com/brav0hax/smbexec.git
 git clone https://github.com/libyal/libesedb.git
-wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
+
+#No longer need the below line (link was broken)...now included in my repository
+#wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
+
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
 
 #Configure libesedb
