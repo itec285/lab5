@@ -16,7 +16,7 @@ cd /opt
 git clone https://github.com/itec285/lab5-smbexec.git
 mv lab5-smbexec smbexec
 git clone https://github.com/itec285/lab5-libesedb.git
-mv lab5- libesedb libesedb
+mv lab5-libesedb libesedb
 
 #Install more necessary software
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
