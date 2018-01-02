@@ -6,16 +6,19 @@
 # This script automates the process of installing several necessary tools into Kali Linux 2016.2012/2016
 # Credit for most of this to: http://hackers-workshop.net/how-to-install-smbexec2-on-kali-linux
 
-# Install the necessary software
+# No longer need the below line (link was broken)...now included in my repository
+#wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
+
+# Instead, copy from my github to the /opt directory.
 cp ntdsxtract_v1_2_beta.zip /opt
 
 cd /opt
-git clone https://github.com/brav0hax/smbexec.git
-git clone https://github.com/libyal/libesedb.git
+git clone https://github.com/itec285/lab5-smbexec.git
+mv lab5-smbexec smbexec
+git clone https://github.com/itec285/lab5-libesedb.git
+mv lab5- libesedb libesedb
 
-#No longer need the below line (link was broken)...now included in my repository
-#wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
-
+#Install more necessary software
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
 
 #Configure libesedb
