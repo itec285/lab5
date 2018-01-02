@@ -9,7 +9,7 @@
 # No longer need the below line (link was broken)...now included in my repository
 #wget http://www.ntdsxtract.com/downloads/ntdsxtract/ntdsxtract_v1_2_beta.zip
 
-# Instead, copy from my github to the /opt directory.
+# Instead, copy from the current directory (which contains my github contents) to the /opt directory.
 cp ntdsxtract_v1_2_beta.zip /opt
 
 cd /opt
