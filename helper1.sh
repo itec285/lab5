@@ -12,6 +12,10 @@
 # Instead, copy from the current directory (which contains my github contents) to the /opt directory.
 cp ntdsxtract_v1_2_beta.zip /opt
 
+#Make sure we are up to date
+echo RUNNING APT-GET UPDATE
+apt-get update
+
 cd /opt
 git clone https://github.com/itec285/lab5-smbexec.git
 mv lab5-smbexec smbexec
