@@ -10,7 +10,7 @@ cd ~
 #Make a temporary directory to store working data.  Will be used in the next step.
 mkdir ~/hash
 
-python /opt/NTDSXtract/dsusers.py /root/ntds.dit.export/datatable /root/ntds.dit.export/link_table /root/hash --syshive /root/SYSTEM --passwordhashes --lmoutfile /root/lm-out.txt --ntoutfile /root/nt-out.txt --pwdformat john
+python /opt/NTDSXtract/dsusers.py /root/ntds.dit.export/datatable.4 /root/ntds.dit.export/link_table.6 /root/hash --syshive /root/SYSTEM --passwordhashes --lmoutfile /root/lm-out.txt --ntoutfile /root/nt-out.txt --pwdformat john
 
 echo 
 echo \#######################################################################

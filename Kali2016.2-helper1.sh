@@ -17,35 +17,13 @@ echo RUNNING APT-GET UPDATE
 apt-get update
 
 cd /opt
-
-#git clone https://github.com/itec285/lab5-smbexec.git
-#mv lab5-smbexec smbexec
-git clone https://github.com/brav0hax/smbexec.git
-
-#git clone https://github.com/itec285/lab5-libesedb.git
-#mv lab5-libesedb libesedb
-git clone https://github.com/libyal/libesedb.git
-
+git clone https://github.com/itec285/lab5-smbexec.git
+mv lab5-smbexec smbexec
+git clone https://github.com/itec285/lab5-libesedb.git
+mv lab5-libesedb libesedb
 
 #Install more necessary software
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
-
-#Fix for libesedb missing 
-echo
-echo ############################################
-echo    Fixing missing libfvalue_split_string.h
-echo               Jan 2018 - ML
-echo ############################################
-echo
-cd ~/lab5 
-cp libfvalue_split_string.h /opt/libesedb/libesedb/
-cp libfvalue_split_string.h /opt/libesedb/esedbtools/
-echo
-echo ############################################
-echo   Finished copying libfvalue_split_string.h
-echo ############################################
-echo
-
 
 #Configure libesedb
 cd /opt/libesedb/
