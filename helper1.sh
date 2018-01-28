@@ -30,21 +30,21 @@ git clone https://github.com/libyal/libesedb.git
 #Install more necessary software
 apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-config 
 
-#Fix for libesedb missing 
-echo
-echo ############################################
-echo    Fixing missing libfvalue_split_string.h
-echo               Jan 2018 - ML
-echo ############################################
-echo
-cd ~/lab5 
-cp libfvalue_split_string.h /opt/libesedb/libesedb/
-cp libfvalue_split_string.h /opt/libesedb/esedbtools/
-echo
-echo ############################################
-echo   Finished copying libfvalue_split_string.h
-echo ############################################
-echo
+##Fix for libesedb missing - No longer needed as of Jan 27 2018.  
+#echo
+#echo ############################################
+#echo    Fixing missing libfvalue_split_string.h
+#echo               Jan 2018 - ML
+#echo ############################################
+#echo
+#cd ~/lab5 
+#cp libfvalue_split_string.h /opt/libesedb/libesedb/
+#cp libfvalue_split_string.h /opt/libesedb/esedbtools/
+#echo
+#echo ############################################
+#echo   Finished copying libfvalue_split_string.h
+#echo ############################################
+#echo
 
 
 #Configure libesedb
