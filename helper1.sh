@@ -17,7 +17,7 @@ cp ntdsxtract_v1_2_beta.zip /opt
 echo RUNNING APT-GET UPDATE
 apt-get update
 echo INSTALLING LIBESEDB-UTILS
-apt-get install libesedb-utils
+apt-get -y install libesedb-utils
 
 #Unzip Configure NTDSXtract
 cd /opt
