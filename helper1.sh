@@ -12,6 +12,10 @@
 # Instead, copy from the current directory (which contains my github contents) to the /opt directory.
 cp ntdsxtract_v1_2_beta.zip /opt
 
+# We will also unzip libesedb and move to the /opt dir with the right name
+unzip lab5-libesedb-2018.zip
+mv lab5-libesedb-2018/ /opt/libesedb/
+
 #Make sure we are up to date
 echo RUNNING APT-GET UPDATE
 apt-get update
@@ -22,9 +26,13 @@ cd /opt
 #mv lab5-smbexec smbexec
 git clone https://github.com/brav0hax/smbexec.git
 
+#We used to get libesedb from either libyals repo or a mirror on mine, but now I unzip above
+# Oldest way
 #git clone https://github.com/itec285/lab5-libesedb.git
 #mv lab5-libesedb libesedb
-git clone https://github.com/libyal/libesedb.git
+# OR
+# Still an old way
+#git clone https://github.com/libyal/libesedb.git
 
 
 #Install more necessary software
@@ -45,7 +53,6 @@ apt-get -y install automake autoconf autopoint gcc-mingw-w64-x86-64 libtool pkg-
 #echo   Finished copying libfvalue_split_string.h
 #echo ############################################
 #echo
-
 
 #Configure libesedb
 cd /opt/libesedb/
